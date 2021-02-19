@@ -1,0 +1,117 @@
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./viewfinal.css">
+
+</head>
+
+<body>
+  <div class="main-content">
+    <div class="container mt-7">
+      <div class="card shadow">
+        <div class="card-header border-0">
+          <div class="row">
+            <div class="col-md-3">
+              <h3 class="mb-0">View Data</h3>
+            </div>
+            <div class="col-md-3">
+              <h3 class="mb-0"></h3>
+            </div>
+            <div class="col-md-3 filter">
+              <select class="input-field">
+                <option hidden>Filter for matched/mismatched</option>
+                <option value=""></option>
+                <option value="true">Matched</option>
+                <option value="false">MisMatched</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <div class="input-icons">
+                <i class="fa fa-search icon" aria-hidden="true"></i>
+                <input class="input-field" type="text" placeholder="Search rules">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table align-items-center table-flush">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Tenable</th>
+                <th scope="col">Upp</th>
+                <th scope="col">CMDB</th>
+                <th scope="col">Matched</th>
+                <th scope="col">Rule</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="align-items-center">
+                    <span class="mb-0 text-sm"><strong>Argon Design System</strong></span>
+                  </div>
+                </td>
+                <td>
+                  $2,500 USD
+                </td>
+                <td>
+                  <strong>Sample 1</strong>
+                </td>
+                <td>
+                  <span class="success"><i class="fa fa-check fa-2x" aria-hidden="true"></i></span>
+                </td>
+                <td>
+                  Sample 23
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="align-items-center">
+                    <span class="mb-0 text-sm"><strong>Argon Design System</strong></span>
+                  </div>
+                </td>
+                <td>
+                  $2,500 USD
+                </td>
+                <td>
+                  <strong>Sample 1</strong>
+                </td>
+                <td>
+                  <span class="danger"><i class="fa fa-times fa-2x" aria-hidden="true"></i></span>
+                </td>
+                <td>
+                  Sample 26
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-footer py-4">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
