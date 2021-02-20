@@ -1,0 +1,184 @@
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./view3.css">
+  
+  </head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row parent">
+      <div class="row">
+        <label>VIEW 1 MisMatched Data: IP Addresses that could not be resolved</label>
+      </div>
+      <div class="row source">
+          <div class="col-md-2">
+            <label>Source 1</label>
+            <div class="src-origin">Tenable</div>
+          </div>
+          <div class="col-md-2">
+            <label>Source 2</label>
+            <div class="src-origin">CMDB</div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="main-content mt-42">
+          <div class="container">
+            <div class="card shadow">
+              <div class="card-header border-0">
+                <div class="row">
+                  <div class="col-md-3">
+                    <h3 class="mb-0"></h3>
+                  </div>
+                  <div class="col-md-3">
+                    <h3 class="mb-0"></h3>
+                  </div>
+                  <div class="col-md-3 filter">
+                    <select class="form-control">
+                      <option hidden>Filter for matched/mismatched</option>
+                      <option value=""></option>
+                      <option value="true">Matched</option>
+                      <option value="false">MisMatched</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="inner-addon left-addon">
+                      <span class="danger glyphicon glyphicon-search"></span>
+                      <input class="form-control" type="text" placeholder="Search rules">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table class="table align-items-center table-flush">
+                  <thead class="thead-light">
+                    <tr>
+                      <th scope="col" class="col-md-2">Tenable</th>
+                      <th scope="col" class="col-md-2">Type</th>
+                      <th scope="col" class="col-md-2">CMDB</th>
+                      <th scope="col" class="col-md-2">Matched</th>
+                      <th scope="col" class="col-md-2">Rule</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="align-items-center">
+                          <span class="mb-0 text-center"><strong>Argon Design System</strong></span>
+                        </div>
+                      </td>
+                      <td>
+                        $2,500 USD
+                      </td>
+                      <td>
+                        <strong>Sample 1</strong>
+                      </td>
+                      <td>
+                        <span class="glyphicon glyphicon-ok"></span>
+                      </td>
+                      <td>
+                        Sample 23
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="align-items-center">
+                          <span class="mb-0 text-sm"><strong>Argon Design System</strong></span>
+                        </div>
+                      </td>
+                      <td>
+                        $2,500 USD
+                      </td>
+                      <td>
+                        <strong>Sample 1</strong>
+                      </td>
+                      <td>
+                        <span class="glyphicon glyphicon-remove"></span>
+                      </td>
+                      <td>
+                        Sample 26
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="align-items-center">
+                          <span class="mb-0 text-center"><strong>Argon Design System</strong></span>
+                        </div>
+                      </td>
+                      <td>
+                        $2,500 USD
+                      </td>
+                      <td>
+                        <strong>Sample 1</strong>
+                      </td>
+                      <td>
+                        <span class="glyphicon glyphicon-ok"></span>
+                      </td>
+                      <td>
+                        Sample 23
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="align-items-center">
+                          <span class="mb-0 text-center"><strong>Argon Design System</strong></span>
+                        </div>
+                      </td>
+                      <td>
+                        $2,500 USD
+                      </td>
+                      <td>
+                        <strong>Sample 1</strong>
+                      </td>
+                      <td>
+                        <span class="glyphicon glyphicon-ok"></span>
+                      </td>
+                      <td>
+                        Sample 23
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="align-items-center">
+                          <span class="mb-0 text-center"><strong>Argon Design System</strong></span>
+                        </div>
+                      </td>
+                      <td>
+                        $2,500 USD
+                      </td>
+                      <td>
+                        <strong>Sample 1</strong>
+                      </td>
+                      <td>
+                        <span class="glyphicon glyphicon-ok"></span>
+                      </td>
+                      <td>
+                        Sample 23
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer py-4">
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+</body>
+
+</html>
