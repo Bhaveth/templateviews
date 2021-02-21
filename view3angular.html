@@ -1,0 +1,125 @@
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en">
+
+<head>
+
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.min.js"
+    integrity="sha512-fVCjT4t8Rpwq8H9CRtGl2KJGwJZXJJJ5vamhkpcT8UmW+Oe0ZNC2ACO8/virYei0FynS5nbliWfCPVV4NkBrJA=="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./view3angular.css">
+  <script src="./script.js"></script>
+</head>
+
+<body ng-controller="ListController as list">
+  <div class="container-fluid">
+    <div class="row parent">
+      <div class="row">
+        <label>VIEW 1 MisMatched Data: IP Addresses that could not be resolved</label>
+      </div>
+      <div class="row source">
+        <div class="col-md-2">
+          <label>Source 1</label>
+          <div class="src-origin">Tenable</div>
+        </div>
+        <div class="col-md-2">
+          <label>Source 2</label>
+          <div class="src-origin">CMDB</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="main-content mt-42">
+          <div class="container">
+            <div class="card shadow">
+              <div class="card-header border-0">
+                <div class="row">
+                  <div class="col-md-3">
+                    <h3 class="mb-0"></h3>
+                  </div>
+                  <div class="col-md-3">
+                    <h3 class="mb-0"></h3>
+                  </div>
+                  <div class="col-md-3 filter">
+                    <select class="form-control">
+                      <option hidden>Filter for matched/mismatched</option>
+                      <option value=""></option>
+                      <option value="true">Matched</option>
+                      <option value="false">MisMatched</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="inner-addon left-addon">
+                      <span class="danger glyphicon glyphicon-search"></span>
+                      <input class="form-control" type="text" placeholder="Search rules">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table class="table align-items-center table-flush">
+                  <thead class="thead-light">
+                    <tr>
+                      <th scope="col" class="col-md-2">Tenable</th>
+                      <th scope="col" class="col-md-2">Type</th>
+                      <th scope="col" class="col-md-2">CMDB</th>
+                      <th scope="col" class="col-md-2">Matched</th>
+                      <th scope="col" class="col-md-2">Rule</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr ng-repeat="item in filteredItems">
+                      <td>
+                        <div class="align-items-center">
+                          <span class="mb-0 text-center"><strong>{{item.itemCode}}</strong></span>
+                        </div>
+                      </td>
+                      <td>
+                        {{item.itemName}}
+                      </td>
+                      <td>
+                        <strong>{{item.itemDescription}}</strong>
+                      </td>
+                      <td>
+                        <span class="glyphicon glyphicon-ok"></span>
+                      </td>
+                      <td>
+                        {{item.available}}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div>Showing 1 to 5 of 100</div>
+                  </div>
+                  <div class="col-md-2 col-md-offset-6">
+                    <nav aria-label="Page float-right">
+                      <ul class="pagination">
+                        <li class="page-item"><a class="page-link" ng-class="{disabledLink: disablePrevious()}" ng-click="onPreviousClick()"><span class="glyphicon glyphicon-menu-left"></span></a></li>
+                        <li class="page-item"><a class="page-number">{{curPage}}</a></li>
+                        <li class="page-item"><a [disable]="disableNext" ng-click="onNextClick()" class="page-link"><span class="glyphicon glyphicon-menu-right"></span></a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
