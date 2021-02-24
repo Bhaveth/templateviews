@@ -40,6 +40,32 @@ app.controller('ListController', function ($scope) {
 
     $scope.filteredItems = itemsDetails.slice(begin, end);
   });
+  
+// check box code
+  
+$scope.selectedActionType = null;
+$scope.selectedActions = []
+$scope.onActionChange = function() {
+  $scope.selectedActions = []
+}
+
+$scope.onSubmit = function() {
+  console.log($scope.selectedActions);
+  angular.forEach($scope.selectedActions, function(item, value){
+    // item.value ? 0 : 1;
+    console.log(value)
+});
+};
+
+$scope.isChecked = function(item) {
+  return item.itemCode == 102;
+}
+
+$scope.isActionSelected = function() {
+  return !($scope.selectedActionType != null);
+}
+
+// check box code end
 });
 
 
