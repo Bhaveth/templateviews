@@ -44,7 +44,11 @@
                     <h3 class="mb-0"></h3>
                   </div>
                   <div class="col-md-3">
-                    <h3 class="mb-0"></h3>
+                    <select class="form-control" ng-model="selectedActionType" ng-change="onActionChange()">
+                      <option value="" selected>Select</option>
+                      <option value="Ignore">Ignore</option>
+                      <option value="CMDB">CMDB</option>
+                    </select>
                   </div>
                   <div class="col-md-3 filter">
                     <select class="form-control">
@@ -66,6 +70,7 @@
                 <table class="table align-items-center table-flush">
                   <thead class="thead-light">
                     <tr>
+                      <th scope="col" class="col-md-1"></th>
                       <th scope="col" class="col-md-2">Tenable</th>
                       <th scope="col" class="col-md-2">Type</th>
                       <th scope="col" class="col-md-2">CMDB</th>
@@ -75,6 +80,9 @@
                   </thead>
                   <tbody>
                     <tr ng-repeat="item in filteredItems">
+                      <td>
+                        <input class="form-control" ng-disabled="isActionSelected()" ng-checked="isChecked(item)" ng-model="selectedActions[item.itemCode]" type="checkbox">
+                      </td>
                       <td>
                         <div class="align-items-center">
                           <span class="mb-0 text-center"><strong>{{item.itemCode}}</strong></span>
