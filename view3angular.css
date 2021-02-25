@@ -275,6 +275,21 @@ td .glyphicon {
 
 /* end of css for pagination */
 
+/* types css */
+.type td .glyphicon{
+    font-size: 14px !important;
+    color: #00a6e2;;
+}
+
+.type a:focus, a:hover {
+    color: black
+}
+
+.type a {
+    color: black;
+}
+/* end of types css */
+
 h3 {
     margin-top: 6px;
 }
