@@ -39,6 +39,42 @@
           <div class="container">
             <div class="card shadow">
               <div class="card-header border-0">
+                
+              </div>
+              <div class="table-responsive">
+                <table class="table align-items-center table-flush">
+                  <tbody class="type">
+                    <tr  ng-repeat="item in filteredItems">
+                      <td>
+                        <span class="glyphicon glyphicon-play"></span> <a>{{item.itemName}} ({{58}})</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div>Showing 1 to 5 of 100</div>
+                  </div>
+                  <div class="col-md-2 col-md-offset-6">
+                    <nav aria-label="Page float-right">
+                      <ul class="pagination">
+                        <li class="page-item"><a class="page-link" ng-class="{disabledLink: disablePrevious()}" ng-click="onPreviousClick()"><span class="glyphicon glyphicon-menu-left"></span></a></li>
+                        <li class="page-item"><a class="page-number">{{curPage}}</a></li>
+                        <li class="page-item"><a [disable]="disableNext" ng-click="onNextClick()" class="page-link"><span class="glyphicon glyphicon-menu-right"></span></a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-content mt-42">
+          <div class="container">
+            <div class="card shadow">
+              <div class="card-header border-0">
                 <div class="row">
                   <div class="col-md-3">
                     <h3 class="mb-0"></h3>
