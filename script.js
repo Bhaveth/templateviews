@@ -13,6 +13,21 @@ app.controller('ListController', function ($scope) {
     return Math.ceil(itemsDetails.length / $scope.itemsPerPage);
 
   };
+  
+  // inline filter
+  $scope.showTenableFilter = false;
+  $scope.tenableFilter = '';
+  $scope.onTenableFilterClick = function() {
+    $scope.showTenableFilter = true;
+
+  }
+
+  $scope.onTenableFilterRemove = function() {
+    $scope.showTenableFilter = false;
+    $scope.tenableFilter = '';
+  }
+  
+  // inline filter end
 
 
   $scope.onPreviousClick = function () {
