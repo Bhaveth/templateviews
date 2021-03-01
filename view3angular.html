@@ -107,7 +107,24 @@
                   <thead class="thead-light">
                     <tr>
                       <th scope="col" class="col-md-1"></th>
-                      <th scope="col" class="col-md-2">Tenable</th>
+                      <th scope="col" class="col-md-2">
+                      <div ng-if="!showTenableFilter">
+                            Tenable
+                            <span
+                              ng-click="onTenableFilterClick()"
+                              class="glyphicon glyphicon-filter"
+                            ></span>
+                          </div>
+                          <div ng-hide="!showTenableFilter" class="inner-addon right-addon">
+                            <span ng-click="onTenableFilterRemove()" class="glyphicon glyphicon-remove"></span>
+                            <input
+                              class="form-control"
+                              type="text"
+                              ng-model="tenableFilter"
+                              placeholder="Search rules"
+                            />
+                          </div>
+                      </th>
                       <th scope="col" class="col-md-2">Type</th>
                       <th scope="col" class="col-md-2">CMDB</th>
                       <th scope="col" class="col-md-2">Matched</th>
