@@ -125,13 +125,50 @@
                             />
                           </div>
                       </th>
-                      <th scope="col" class="col-md-2">Type</th>
+                      <th scope="col" class="col-md-2"><div ng-if="!showTenableFilter">
+                            Type
+                              <div class="dropdown options">
+                                <span
+                                  class="dropdown-toggle"
+                                  data-toggle="dropdown"
+                                  role="button"
+                                  aria-haspopup="true"
+                                  aria-expanded="true"
+                                  ><span
+                                    class="glyphicon glyphicon-option-vertical"
+                                  ></span
+                                ></span>
+                                <ul class="dropdown-menu">
+                                  <li>
+                                    <a ng-click="onTenableFilterClick()"
+                                      >Filter</a
+                                    >
+                                  </li>
+                                  <li><a ng-click="onGroupByClick()">Group By</a></li>
+                                </ul>
+                              </div>
+                          </div>
+                          <div
+                            ng-hide="!showTenableFilter"
+                            class="inner-addon right-addon"
+                          >
+                            <span
+                              ng-click="onTenableFilterRemove()"
+                              class="glyphicon glyphicon-remove"
+                            ></span>
+                            <input
+                              class="form-control"
+                              type="text"
+                              ng-model="tenableFilter"
+                              placeholder="Search rules"
+                            />
+                          </div></th>
                       <th scope="col" class="col-md-2">CMDB</th>
                       <th scope="col" class="col-md-2">Matched</th>
                       <th scope="col" class="col-md-2">Rule</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody ng-hide="showGroupBy">
                     <tr ng-repeat="item in filteredItems">
                       <td>
                         <input class="form-control" ng-disabled="isActionSelected()" ng-checked="isChecked(item)" ng-model="selectedActions[item.itemCode]" type="checkbox">
@@ -155,6 +192,14 @@
                       </td>
                     </tr>
                   </tbody>
+                  <tbody ng-hide="!showGroupBy" class="type">
+                      <tr ng-repeat="item in filteredItems">
+                        <td>
+                          <span class="glyphicon glyphicon-play"></span>
+                          <a>{{item.itemName}} ({{58}})</a>
+                        </td>
+                      </tr>
+                    </tbody>
                 </table>
               </div>
               <div class="card-footer">
