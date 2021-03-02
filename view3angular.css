@@ -290,6 +290,11 @@ td .glyphicon {
 }
 /* end of types css */
 
+.options {
+    display: inline;
+    text-transform: none !important;
+}
+
 h3 {
     margin-top: 6px;
 }
