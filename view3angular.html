@@ -106,7 +106,14 @@
                 <table class="table align-items-center table-flush">
                   <thead class="thead-light">
                     <tr>
-                      <th scope="col" class="col-md-1"></th>
+                      <th scope="col" class="col-md-1">
+                      <input
+                            class="form-control"
+                            ng-model="selectAll"
+                            type="checkbox"
+                            ng-change="onSelectAll()"
+                          />
+                      </th>
                       <th scope="col" class="col-md-2">
                       <div ng-if="!showTenableFilter">
                             Tenable
