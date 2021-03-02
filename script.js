@@ -81,6 +81,17 @@ $scope.isActionSelected = function() {
 }
 
 // check box code end
+  
+ // groupby code
+
+$scope.showGroupBy = false;
+
+$scope.onGroupByClick = function() {
+  $scope.showGroupBy = true;
+}
+
+// group by code end 
+  
 });
 
 
