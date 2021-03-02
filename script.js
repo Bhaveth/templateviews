@@ -92,6 +92,21 @@ $scope.onGroupByClick = function() {
 
 // group by code end 
   
+  
+  // select all 
+$scope.selectAll = false;
+$scope.onSelectAll = function() {
+  angular.forEach($scope.filteredItems, function(item, value){
+    if ($scope.selectAll) {
+      $scope.selectedActions[item.itemCode] = true;
+    } else {
+      $scope.selectedActions[item.itemCode] = false;
+    }
+});
+}
+
+//select all end
+  
 });
 
 
