@@ -346,3 +346,25 @@ h3 {
 border-0 {
     border: 0 !important;
 }
+
+/* table scrolling */
+
+table {
+    border-collapse: collapse;
+    overflow-x: scroll;
+}
+
+thead, tbody {
+    display: block;
+}
+tbody {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100px;
+}
+td, th {
+    overflow:hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+}
+/* table scrolling  end*/
