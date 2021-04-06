@@ -347,7 +347,7 @@ border-0 {
     border: 0 !important;
 }
 
-/* table scrolling */
+/* table scrolling  not needed*/
 
 table {
     border-collapse: collapse;
@@ -368,3 +368,10 @@ td, th {
     max-width: 100px;
 }
 /* table scrolling  end*/
+
+
+.table td, .table th {
+    min-width: 180px;
+}
+
+thead tr:nth-child(1) th{background: white; position: sticky;top: 0; z-index: 10;}
